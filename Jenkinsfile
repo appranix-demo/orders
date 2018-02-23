@@ -3,7 +3,7 @@ node {
          git 'https://github.com/veereshwaran/orders/'
          sh 'mvn -DskipTests package'
          sh "echo build docker"
-         sh "docker build -t veeresh27/front-end:${env.BUILD_ID} ."
+         sh "docker build -t veeresh27/orders:${env.BUILD_ID} ."
    }
 
    stage('Publish docker') {
